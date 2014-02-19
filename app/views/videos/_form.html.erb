@@ -1,0 +1,26 @@
+
+  <div class="form-group">
+    <%= f.label :title,  :default => "Title" %>
+    <%= f.text_field :title, :class => 'text_field', class: 'form-control input-sm'%>
+    
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, :require => true %>
+    <%= f.text_field :description, :require => true , class: 'form-control input-sm' %>
+  </div>
+
+<div class="form-group">
+<% if @video.new_record?%>
+   <button class="btn btn-primary" type="submit">
+     <%= t("web-app-theme.save", :default => "Step 2") %>
+  </button>
+<%else%>
+  <button class="btn btn-primary" type="submit">
+     <%= t("web-app-theme.save", :default => "Save") %>
+  </button>
+<%end%>
+
+  
+	<%= link_to t("web-app-theme.cancel", :default => "Cancel"), videos_path, :class => "btn btn-warning" %>
+</div>

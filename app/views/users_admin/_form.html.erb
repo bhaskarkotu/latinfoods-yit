@@ -1,0 +1,75 @@
+<fieldset>
+<div class="form-horizontal">
+<%= form_for(@user, url: @url) do |f| %>
+  <% if @user.errors.any? %>  
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li class="alert alert-danger"><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label "First_name", class: 'col-md-2 control-label'%>
+    <div class="col-md-6">
+      <%= f.text_field :first_name, class: 'form-control input-md', required: true %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label "Last Name", class: 'col-md-2 control-label'  %>
+    <div class="col-md-6">
+      <%= f.text_field :last_name, class: 'form-control input-md', required: true %>
+      </div>
+  </div>
+
+   <div class="form-group">
+    <%= f.label "Institution", class: 'col-md-2 control-label'  %>
+     <div class="col-md-6">
+    <%= f.text_field :institution, class: 'form-control input-md', required: true %>
+    </div>
+  </div>
+
+   <div class="form-group">
+    <%= f.label "Email", class: 'col-md-2 control-label'  %>
+    <div class="col-md-6">
+    <%= f.text_field :email, class: 'form-control input-md', required: true %>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Password", class: 'col-md-2 control-label'  %>
+    <div class="col-md-6">
+    <%= f.password_field :password, class: 'form-control input-md' %>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Password Confirmation", class: 'col-md-2 control-label'  %>
+    <div class="col-md-6">
+    <%= f.password_field :password_confirmation, class: 'form-control input-md' %>
+  </div>
+  </div>
+
+  <div class="form-group">
+  <label class="col-md-2 control-label">Role</label>
+  <div class="col-md-4">
+    <%= f.select :role, Role.all.collect {|p| [ p.name] },{:default => 'Guest'}, { :class => 'form-control'} %>
+  </div>
+</div>
+
+  <div class="form-group">
+  <div class="col-md-offset-2 col-md-8">
+   <%= f.submit "Submit", class: 'btn btn-success' %>
+   <%= link_to 'Back', users_admin_index_path, class: 'btn btn-default' %>
+  </div>
+</div>
+
+</fieldset>
+
+ 
+<% end %>
+</div>
+</fieldset>
+

@@ -1,0 +1,95 @@
+<div class="container fill">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="fill">
+          <%= image_tag("food1a.jpg", size: "1150x464") %>
+        </div>
+      </div>
+      <div class="item">
+        <div class="fill">
+          <%= image_tag("food2a.jpg", size: "1150x464") %>
+        </div>
+      </div>
+      <div class="item">
+        <div class="fill">
+          <%= image_tag("food3a.jpg", size: "1150x464") %>
+        </div>
+      </div>
+      <div class="item">
+        <div class="fill">
+          <%= image_tag("food4a.jpg", size: "1150x464") %>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-center">
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 displayed">
+      <div class="input-group search-box">
+        <input type="text" class="form-control" placeholder="Search LATINFOODS">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-danger" type="button">Search</button>
+        </span>
+      </div>
+    </div>
+    <div class="col-lg-6 col-lg-offset-7 displayed">
+        <div class="btn-group btn-padding"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Basic Search <span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+                <li><a href="#">Basic Search</a>
+                </li>
+                <li><a href="#">Scientific Search</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class=" well well-sm" >
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-center">
+          LATINFOODS is the Latin American food data network stipulated through the Food and Agriculture Organization (FAO)
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="well">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <%= link_to image_tag("orga.png", size: "300x200"), {controller: 'home', action: 'organization'} %>
+        <h2>Organization</h2>
+      </div>          
+      <div class="col-md-4 text-center">  
+        <%= link_to image_tag("pic1.jpg", size: "300x200"), {controller: 'home', action: 'wedo'} %>
+        <h2>What We DO</h2>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= link_to  image_tag("pic3_publications.jpg", size: "300x200"), {controller: 'home', action: 'publications'} %>
+        <h2>Publications</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <footer>
+    <p class="pull-left"><%= image_tag("INFOODS.gif", size: "100x60")%></p>
+    <p class="pull-right"><%= image_tag("FAO-logo-en.png", size: "300x60") %></p> 
+  </footer>
+</div>
+

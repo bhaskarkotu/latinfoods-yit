@@ -1,0 +1,40 @@
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand active"><a href="#">Start Bootstrap</a>
+                </li>
+                <li class="<%= 'active' if params[:action] == 'personalinfo' %>"><%= link_to 'PersonalInfo', {controller: 'profileinfo', action: 'personalinfo'} %>
+                </li>
+                <li><%= link_to 'Upload Excel data', {controller: 'profileinfo', action: 'uploaddatabyexcel'} %>
+                </li>
+                <li><%= link_to 'Manual Data', {controller: 'profileinfo', action: 'manualdata'} %>
+                </li>
+                <li><%= link_to 'Search', {controller: 'profileinfo', action: 'search'} %>
+                </li>
+                <li><%= link_to 'Elearning', {controller: 'profileinfo', action: 'elearning'} %>
+                </li>
+                <li><%= link_to 'News letters', {controller: 'profileinfo', action: 'newsletter'} %>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <div class="content-header">
+                <h1>
+                    <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+                    Simple Sidebar
+                </h1>
+            </div>
+            <!-- Keep all page content within the page-content inset div! -->
+          
+        </div>
+
+    </div>
+
+
+ 
+    

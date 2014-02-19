@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+      <%= render partial: '/sidebar' %>
+
+      <div class="col-md-9">
+
+        <div class="row well">
+              <p class="lead">Edit Video</p>
+    <%= form_for @video, :url => video_path(@video), :html => { :class => :form } do |f| -%>
+        <%= render :partial => "form", :locals => {:f => f} %>
+      <% end -%>
+    </div>
+  </div>
+</div>
+</div>
+

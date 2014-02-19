@@ -1,0 +1,38 @@
+<div class="container well form-style">
+   <h4>If you want to contact us please fill out the form below we get back to you as soon as possible. </h4>
+   <h4>Thank you</h4>
+  <div class="col-md-6">
+   
+    <% if flash[:errors] %>
+        <div class="alert-danger alert"> 
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <% for i in 0.. flash[:errors].length %>
+            <ul>
+              <%= flash[:errors][i] %> 
+            </ul>
+          <% end %>
+        </div>
+    <% end %>
+    <%= simple_form_for(@contact, :html => {:class => 'form-horizontal' } ,:url => url_for(:action => 'save_details',:controller => 'home'),:class => 'form-control', 
+      :method => 'post' ) do |f| %>
+                           
+      <%= f.label :name %>
+      <%= f.text_field :name, :size => 61, class:"form-control",id:"name", type:"text" %>
+                    
+      <%= f.label :email %>
+      <%= f.text_field :email, :size => 61, class:"form-control",id:"email", type:"email", value:"", :required => true %>
+                            
+      <%= f.label :message %>
+      <%= f.text_area :message, class:"form-control",id:"text", rows:"10", type:"text"%>
+                              
+      <%= submit_tag "Send" , class:"btn btn-primary btn-style "%>
+      <button class="btn btn-default btn-style"><%= link_to 'Cancel', :controller => "home", :action => "index" %></button>
+    <% end %>
+
+    
+
+  </div>
+  <div class="col-lg-2 pull-right" style="margin-top:-5%">
+      <%= image_tag('logolatinfoods-01.png', size: '300x70', class: 'logo-style') %>
+  </div> 
+</div>

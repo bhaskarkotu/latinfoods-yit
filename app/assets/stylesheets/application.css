@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require twitter/bootstrap
+ *= require_tree .
+ */
+
+.search-box{
+    background: #333333;
+    padding: 2px
+}
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+.well-sm{
+	font-size: 20px;
+	margin-top: 2%;
+	background-color: #808080;
+}
+body{
+	padding : 51px;
+}
+.displayed {
+    margin-left: 25%;
+	margin-top: -25%;
+}
+.form-style{
+	margin-top: 3%;
+	margin-left: 12%;
+}
+.btn-style{
+	margin-top: 3%;
+}
+.confirm-style{
+	margin-top: 3%;
+	margin-left: 3%;
+}
+nav div a{
+	color: white;
+}
+nav div a:hover{
+	color:white;
+	text-decoration: none;
+}
+button a{
+	color: white;
+}
+button a:hover{
+	color:white;
+	text-decoration: none;
+}
+.logo-style{
+	margin-left: -140px;
+	margin-top: 20px;
+}
+.dropdown-style{
+	padding-top: 0.5%;
+	margin-left: -5%;
+}
+.btn-padding{
+	margin-left: -5%;
+	margin-top: 0.55%;
+}
+#padding{
+
+	padding-top: 2%
+}

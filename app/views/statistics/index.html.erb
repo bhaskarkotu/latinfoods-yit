@@ -1,0 +1,28 @@
+
+
+<div class="container">
+	<div class="row">
+		<%= render partial: '/sidebar' %>
+		<div class="col-md-9">
+			<div class="row">
+				<h1>Google Graphs</h2>
+				<div class="col-md-6">
+					<p class="lead"> Sample Line Chart </p>
+					<%= image_tag(@lc) %>
+				</div>
+				<div class="col-md-6">
+					<p class="lead"> Sample Bar Chart </p>
+		 			<%= image_tag(@bc) %><br>
+	 			</div>
+	 		</div>
+	 		<div class="row">
+	 			<div class="col-md-6">
+	 				<p class="lead"> Sample Pie Chart </p>
+	 				<%= image_tag(@pc) %>
+	 			</div>
+ 			</div>
+		</div>
+	</div>
+</div>
+
+

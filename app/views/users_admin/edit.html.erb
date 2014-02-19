@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <%= render partial: '/sidebar' %>
+    <div class="col-md-9">
+    <div class="well">
+    <% @url = {controller: 'users_admin', action: 'update', method: :put} %>
+      <legend>Edit <%= @user.first_name %> details </legend>
+      <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+

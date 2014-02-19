@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <%= render partial: '/sidebar' %>
+      <div class="col-md-9">
+      <div class="row">
+        <% flash.each do |type, message| -%>
+          <div class="message <%= type %>">
+            <p class="alert alert-success"><%= message %></p>
+          </div>
+        <% end -%>
+      </div>
+
+        <div class="row">   
+              <p>
+          <%= raw yt_client.my_video(@video.yt_video_id).embed_html %>
+        </p>
+        <h3><%= @video.description %></h3>
+        <p><b>url:</b> <a href="http://www.youtube.com/watch?v=<%= @video.yt_video_id %>&feature=youtube_it" target="_blank">http://www.youtube.com/watch?v=<%= @video.yt_video_id %></a></p>
+
+      <div class="form-group">
+      <%= link_to  'Edit',edit_video_path(@video), class: 'btn btn-primary' %>
+       <%= link_to 'Destroy',{action: 'destroy', controller: 'videos', id: @video.id}, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary'%>
+        <%= link_to  'Back', videos_index_path, class: 'btn btn-primary' %>
+      </div>      
+    
+  
+  

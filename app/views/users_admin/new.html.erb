@@ -1,0 +1,16 @@
+
+
+<div class="container">
+  <div class="row">
+    <%= render partial: '/sidebar' %>
+    <div class="col-md-9">
+    <div class="well">
+     <% @url = {controller: 'users_admin', action: 'create', method: :post} %>
+     <%= notice %>
+     <legend>User registration Form </legend>
+      <%= render 'form' %>
+    </div>
+    </div>
+  </div>
+</div>
+

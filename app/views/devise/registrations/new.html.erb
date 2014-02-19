@@ -1,0 +1,75 @@
+<div class="container">
+ <div class="well">
+  <div class="row"> 
+    <div class="col-lg-10 ">
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal', role: 'form' }, :class => 'form-control' ) do |f| %>
+        <h1>New Member Registration</h1>
+        <legend><h4>To receive access to this scientific search please become a member.  </h4>
+        <h4>Fill out the form below</h4></legend>
+        <%= f.error_notification %>
+       
+
+
+           <div class="form-group">
+              <%= f.label :Firstname, class: 'control-label col-md-2' %>
+              <div class="col-md-4">
+                <%= f.text_field :first_name, class:"form-control" %>
+              </div>
+            </div>
+
+          <div class="form-group">
+             <%= f.label :Lastname,  class: 'control-label col-md-2'%>
+              <div class="col-md-4">
+            <%= f.text_field :last_name, class:"form-control" %>
+           </div>
+          </div>
+          <div class="form-group">
+             <%= f.label :Email, class: 'control-label col-md-2' %>
+              <div class="col-md-4">
+            <%= f.text_field :email, class:"form-control" %>
+          </div>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :Institution, class: 'control-label col-md-2' %>
+              <div class="col-md-4">
+            <%= f.text_field :institution, class:"form-control" %>
+          </div>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :Password,  class: 'control-label col-md-2' %>
+             <div class="col-md-4">
+            <%= f.password_field :password, class:"form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+             <%= f.label "Confirmation",  class: 'control-label col-md-2' %>
+             <div class="col-md-4">
+              <%= f.password_field :password_confirmation, class:"form-control" %>
+              </div>
+          </div>
+
+
+          <div class="checkbox col-lg-offset-2">
+              <label>
+                <input type="checkbox"> Newsletter
+              </label>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2" style="padding-top:20px;">
+              <%= submit_tag "Become a member", class: "btn btn-primary"%> 
+             </div>
+          <div>
+        <% end %>
+    </div>
+  </div>
+ </div>
+  <div class="col-lg-2">
+      <%= image_tag('logolatinfoods-01.png', size: '300x70', class: 'logo-style') %>
+  </div>  
+</div>
+</div>
+
+

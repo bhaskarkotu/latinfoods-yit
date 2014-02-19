@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <%= render partial: '/sidebar' %>
+    <div class="col-md-9">
+      <div class="row  well">
+        <p class="lead">  Add Video </p>
+        <p class="lead">Step 1: add information about your video.</p>
+        <%= form_for @video, :url => upload_new_video_path, :html => { :class => :form } do |f| %>
+          <%= render :partial => "form", :locals => {:f => f} %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+             
+    
+   

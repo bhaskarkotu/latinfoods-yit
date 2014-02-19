@@ -1,0 +1,35 @@
+<div class="col-md-2">
+  <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+
+                <li><% if current_user.has_role? :Admin %>
+                    <%= link_to 'Users', users_admin_index_path %>
+                  <% end %>
+                </li>
+                <li><% if current_user.has_role? :Admin %>
+                    <%= link_to 'Roles', roles_path %>
+                     <% end %>
+                </li>
+                <li>
+                    <%= link_to 'Personal Info', {controller: 'profileinfo', action: 'personalinfo'} %> 
+                </li>
+                <li><%= link_to 'Upload Data', {controller: 'profileinfo', action: 'uploaddatabyexcel'} %>
+                </li>
+                <li><%= link_to 'Manual Data', {controller: 'profileinfo', action: 'manualdata'} %>
+                </li>
+                <li><%= link_to 'Search', {controller: 'profileinfo', action: 'search'} %>
+                </li>
+                <li><%= link_to 'Elearning', {controller: 'videos', action: 'index'} %>
+                </li>
+                <li><%= link_to 'News letters', {controller: 'profileinfo', action: 'newsletter'} %>
+                </li>
+                 <li><%= link_to 'Statistics', {controller: 'statistics', action: 'index'} %>
+                </li>
+                 <li><%= link_to 'Reports', {controller: 'reports', action: 'index'} %> </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

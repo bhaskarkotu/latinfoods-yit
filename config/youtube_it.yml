@@ -1,0 +1,11 @@
+common: &common
+  dev_key: AIzaSyCjt-nGFcm0owA3FEvHDqUaYXpUmoZGppY
+  username:  sabari.67latinfoods@gmail.com
+  password:  9014862663
+  
+test:
+  <<: *common
+development:
+  <<: *common
+production:
+  <<: *common

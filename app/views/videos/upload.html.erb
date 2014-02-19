@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <%= render partial: '/sidebar' %>
+    <div class="col-md-9">
+      <div class="row well">
+        <p class="lead">Step 2: upload a new video.</p>
+        <%= form_tag @upload_info[:url], :multipart => true do %>
+          <%= hidden_field_tag :token, @upload_info[:token] %>
+          <%= label_tag :file %>
+          <%= file_field_tag :file %></br>
+          <%= submit_tag "Upload video", class: 'btn btn-primary'%>
+          <%= link_to  'Back', videos_index_path, class: 'btn btn-primary' %>
+        <% end %>    
+      </div>
+    </div>
+  </div>
+</div>
