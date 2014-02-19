@@ -5,10 +5,17 @@
       <div class="col-md-9">
 
         <div class="row well">
+
+        <% if flash[:notice]  %>
+          <div class="alert alert-dismissable alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong><%= flash[:notice] %></strong> 
+          </div>
+        <% end %>
               <p class="lead">Edit Video</p>
-    <%= form_for @video, :url => video_path(@video), :html => { :class => :form } do |f| -%>
+    <%= form_for @video, :url => video_path(@video), :html => { :class => 'form-horizontal'} do |f| -%>
         <%= render :partial => "form", :locals => {:f => f} %>
-      <% end -%>
+      <% end %>
     </div>
   </div>
 </div>

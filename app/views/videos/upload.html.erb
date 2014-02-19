@@ -7,9 +7,9 @@
         <%= form_tag @upload_info[:url], :multipart => true do %>
           <%= hidden_field_tag :token, @upload_info[:token] %>
           <%= label_tag :file %>
-          <%= file_field_tag :file %></br>
+          <%= file_field_tag :file%></br>
           <%= submit_tag "Upload video", class: 'btn btn-primary'%>
-          <%= link_to  'Back', videos_index_path, class: 'btn btn-primary' %>
+          <%= link_to  'Cancel',  removevideo_video_path(@video.id), class: 'btn btn-primary' %>
         <% end %>    
       </div>
     </div>

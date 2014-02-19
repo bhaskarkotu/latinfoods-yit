@@ -22,6 +22,7 @@ LatinFoods::Application.routes.draw do
   resources :videos do
     member do
       post :add_comment
+      get :removevideo
     end     
     new do
        post :upload

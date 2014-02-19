@@ -4,14 +4,14 @@
       <div class="col-md-9">
       <div class="row">
         <% flash.each do |type, message| -%>
-          <div class="message <%= type %>">
-            <p class="alert alert-success"><%= message %></p>
+         <div class="alert alert-dismissable alert-success">
+         <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong><%= message %></strong> 
           </div>
-        <% end -%>
+        <% end %>
       </div>
-
         <div class="row">   
-              <p>
+         <p id="padding">
           <%= raw yt_client.my_video(@video.yt_video_id).embed_html %>
         </p>
         <h3><%= @video.description %></h3>

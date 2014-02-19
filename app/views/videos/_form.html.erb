@@ -1,16 +1,25 @@
 
   <div class="form-group">
+  <label class="control-label col-md-2">
     <%= f.label :title,  :default => "Title" %>
-    <%= f.text_field :title, :class => 'text_field', class: 'form-control input-sm'%>
+    </label>
+    <div class="col-md-6">
+    <%= f.text_field :title, :require => true, :class => 'text_field', class: 'form-control'%>
+    </div>
     
   </div>
 
   <div class="form-group">
-    <%= f.label :description, :require => true %>
-    <%= f.text_field :description, :require => true , class: 'form-control input-sm' %>
+  <label class="control-label col-md-2">
+    <%= f.label :description %>
+    </label>
+    <div class="col-md-6">
+    <%= f.text_area :description, :require => true , class: 'form-control', rows: "7" %>
+    </div>
   </div>
 
 <div class="form-group">
+  <div class="col-md-offset-3">
 <% if @video.new_record?%>
    <button class="btn btn-primary" type="submit">
      <%= t("web-app-theme.save", :default => "Step 2") %>
@@ -23,4 +32,5 @@
 
   
 	<%= link_to t("web-app-theme.cancel", :default => "Cancel"), videos_path, :class => "btn btn-warning" %>
+</div>
 </div>

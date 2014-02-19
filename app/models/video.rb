@@ -1,7 +1,7 @@
 class Video < ActiveRecord::Base
   
   attr_accessible :title, :description, :yt_video_id, :is_complete
-  
+  validates :title, :description, presence: true
   attr_accessor :comment
   
   scope :completes,   where(:is_complete => true)

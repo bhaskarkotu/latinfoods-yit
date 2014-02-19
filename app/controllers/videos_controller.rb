@@ -5,11 +5,12 @@ def index
 end
 
 def upload
-  @video = Video.create(params[:video])
-  if @video
+  @video = Video.new(params[:video])
+  if @video.save
     @upload_info = Video.token_form(params[:video], save_video_new_video_url(:video_id => @video.id))
   else
     respond_to do |format|
+      flash[:notice] = 'Please fill title and description'
       format.html { render "/videos/new" }
     end
   end
@@ -23,8 +24,10 @@ end
         if @result
           redirect_to @video, :notice => "video successfully updated"
         else
+
           respond_to do |format|
-            format.html { render "/videos/_edit" }
+            flash[:notice] = 'Please fill title nad description'
+            format.html { redirect_to edit_video_path(@video) }
           end
         end
       end
@@ -64,6 +67,14 @@ end
       flash[:error] = "Sorry the comment has not been added."
     end
     redirect_to @video    
+  end
+
+  def removevideo
+    @video = Video.find(params[:id])
+    @video.destroy
+    respond_to do |format|
+      format.html{ redirect_to(action: 'index', controller: 'videos') }
+    end
   end
 
 
